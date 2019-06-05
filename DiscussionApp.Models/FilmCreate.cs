@@ -10,9 +10,6 @@ namespace DiscussionApp.Models
 {
     public class FilmCreate
     {
-        //[Required]
-        public MediaType MediaType { get; set; }
-
         [Required]
         public string Title { get; set; }
 

@@ -16,7 +16,6 @@ namespace DiscussionApp.Services
             var entity =
                     new Film()
                     {
-                        MediaType = model.MediaType,
                         Title = model.Title,
                         Director = model.Director,
                         Writer = model.Writer,
@@ -76,7 +75,6 @@ namespace DiscussionApp.Services
                         new FilmDetail
                         {
                             FilmId = entity.FilmId,
-                            MediaType = entity.MediaType,
                             Title = entity.Title,
                             Director = entity.Director,
                             Writer = entity.Writer,
@@ -103,7 +101,6 @@ namespace DiscussionApp.Services
                         .Films
                         .Single(e => e.FilmId == model.FilmId);
 
-                entity.MediaType = model.MediaType;
                 entity.Title = model.Title;
                 entity.Director = model.Director;
                 entity.Writer = model.Writer;

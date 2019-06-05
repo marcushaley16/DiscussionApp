@@ -12,8 +12,6 @@ namespace DiscussionApp.Models
     {
         [Display(Name="ID")]
         public int FilmId { get; set; }
-        [Display(Name="Type")]
-        public MediaType MediaType { get; set; }
         public string Title { get; set; }
         public string Director { get; set; }
         public string Writer { get; set; }

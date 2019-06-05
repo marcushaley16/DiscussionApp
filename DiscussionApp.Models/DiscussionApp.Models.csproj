@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
@@ -66,16 +66,6 @@
     <Compile Include="PostEdit.cs" />
     <Compile Include="PostListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SportCreate.cs" />
-    <Compile Include="SportDetail.cs" />
-    <Compile Include="SportDiscussionCreate.cs" />
-    <Compile Include="SportEdit.cs" />
-    <Compile Include="SportListItem.cs" />
-    <Compile Include="TelevisionDiscussionCreate.cs" />
-    <Compile Include="TVListItem.cs" />
-    <Compile Include="TVShowCreate.cs" />
-    <Compile Include="TVShowDetail.cs" />
-    <Compile Include="TVShowEdit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

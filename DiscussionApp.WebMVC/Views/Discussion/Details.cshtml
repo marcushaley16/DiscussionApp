@@ -11,14 +11,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.MediaType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MediaType)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.DiscussionTitle)
         </dt>
 
@@ -52,7 +44,6 @@
     </dl>
 </div>
 <p>
-    @*@Html.ActionLink("Film Details", "Details", new { id = Model.FilmId }) |*@
     @Html.ActionLink("Edit", "Edit", new { id = Model.DiscussionId }) |
     @Html.ActionLink("Back to Discussion Board", "Index")
 </p>

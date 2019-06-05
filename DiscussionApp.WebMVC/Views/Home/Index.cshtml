@@ -15,7 +15,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <img c@*lass="visible-md-block w-100" *@ src="~/Content/Assets/index.jpg" alt="First slide">
+                <img src="~/Content/Assets/index.jpg" alt="First slide">
                 <div class="carousel-caption">
                     <h2>Blade Runner 2049</h2>
                     <h4>Roger Deakins won his first Oscar for Best Cinematography for Blade Runner 2049 after being nominated a previous thirteen times.</h4>
@@ -24,6 +24,7 @@
             </div>
             <div class="item">
                 <div class="embed-responsive embed-responsive-16by9">
+                    <!--Keeps video at 16:9 ratio when window size changes-->
                     <iframe src="https://www.youtube.com/embed/deSUQ7mZfWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="carousel-caption">
@@ -61,9 +62,6 @@
 <table class="table">
     <tr class="discussion-table-headings">
         <th>
-            @Html.DisplayNameFor(model => model.MediaType)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.DiscussionTitle)
         </th>
         <th>Media</th>
@@ -80,75 +78,23 @@
 
     @foreach (var item in Model)
     {
-        if (item.MediaType == DiscussionApp.Data.MediaType.Film)
-        {
-            <tr class="discussion-table-row-film">
-                <td>
-                    @Html.DisplayFor(modelItem => item.MediaType)
-                </td>
-                <td>
-                    @Html.ActionLink(item.DiscussionTitle, "Index", "Post", new { discussionId = item.DiscussionId.ToString() }, null)
-                </td>
-                <td>
-                    @Html.ActionLink(item.FilmTitle, "Details", "Film", new { id = item.FilmId }, null)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PostCount)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreatedUTC) by @Html.DisplayFor(modelItem => item.CreatorUsername)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LastPostUTC) by @Html.DisplayFor(modelItem => item.LastPostCreatorUsername)
-                </td>
-            </tr>
-        }
-        if (item.MediaType == DiscussionApp.Data.MediaType.Television)
-        {
-            <tr class="discussion-table-row-tv">
-                <td>
-                    @Html.DisplayFor(modelItem => item.MediaType)
-                </td>
-                <td>
-                    @Html.ActionLink(item.DiscussionTitle, "Index", "Post", new { discussionId = item.DiscussionId.ToString() }, null)
-                </td>
-                <td>
-                    @Html.ActionLink(item.TelevisionTitle, "Details", "Television", new { id = item.TelevisionId }, null)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PostCount)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreatedUTC) by @Html.DisplayFor(modelItem => item.CreatorUsername)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LastPostUTC) by @Html.DisplayFor(modelItem => item.LastPostCreatorUsername)
-                </td>
-            </tr>
-        }
-        if (item.MediaType == DiscussionApp.Data.MediaType.Sports)
-        {
-            <tr class="discussion-table-row-sport">
-                <td>
-                    @Html.DisplayFor(modelItem => item.MediaType)
-                </td>
-                <td>
-                    @Html.ActionLink(item.DiscussionTitle, "Index", "Post", new { discussionId = item.DiscussionId.ToString() }, null)
-                </td>
-                <td>
-                    @Html.ActionLink("Details", "Details", "Sport", new { id = item.SportId }, null)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PostCount)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreatedUTC) by @Html.DisplayFor(modelItem => item.CreatorUsername)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LastPostUTC) by @Html.DisplayFor(modelItem => item.LastPostCreatorUsername)
-                </td>
-            </tr>
-        }
+        <tr class="discussion-table-row-film">
+            <td>
+                @Html.ActionLink(item.DiscussionTitle, "Index", "Post", new { discussionId = item.DiscussionId.ToString() }, null)
+            </td>
+            <td>
+                @Html.ActionLink(item.FilmTitle, "Details", "Film", new { id = item.FilmId }, null)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedUTC) by @Html.DisplayFor(modelItem => item.CreatorUsername)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastPostUTC) by @Html.DisplayFor(modelItem => item.LastPostCreatorUsername)
+            </td>
+        </tr>
     }
 </table>
 <br />
@@ -163,12 +109,12 @@
     <div class="col-md-4">
         <h2 class="home-h2">Television</h2>
         <p>Is Breaking Bad the best show ever made? Share your thoughts! Can't wait for your friends to catch up on Game of Thrones? Come discuss the controversial final season with us!</p>
-        <p class="home-button-tv">@Html.ActionLink("Discuss", "IndexTelevision", "Discussion")</p>
+        @*<p class="home-button-tv">@Html.ActionLink("Discuss", "IndexTelevision", "Discussion")</p>*@
     </div>
     <div class="col-md-4">
         <h2 class="home-h2">Sports</h2>
         <p>Are the Warriors the best team in NBA history or are they ruining the game? Is Cristiano Ronaldo the best soccer player in the world? What is the best rivalry in sports? Share your opinion here!</p>
-        <p class="home-button-sports">@Html.ActionLink("Discuss", "IndexSport", "Discussion")</p>
+        @*<p class="home-button-sports">@Html.ActionLink("Discuss", "IndexSport", "Discussion")</p>*@
     </div>
 </div>
 <br />

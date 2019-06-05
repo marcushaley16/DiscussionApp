@@ -40,8 +40,6 @@ namespace DiscussionApp.Data
         [Key]
         public int FilmId { get; set; }
         [Required]
-        public MediaType MediaType { get; set; }
-        [Required]
         public string Title { get; set; }
         [Required]
         public string Director { get; set; }

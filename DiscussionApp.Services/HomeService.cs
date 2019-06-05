@@ -22,13 +22,8 @@ namespace DiscussionApp.Services
                                 new DiscussionListItem
                                 {
                                     DiscussionId = d.DiscussionId,
-                                    MediaType = d.MediaType,
                                     FilmId = d.FilmId,
-                                    TelevisionId = d.TelevisionId,
-                                    SportId = d.SportId,
                                     FilmTitle = d.Film.Title,
-                                    TelevisionTitle = d.TVShow.Title,
-                                    //Matchup = d.Sport.Matchup,
                                     DiscussionTitle = d.DiscussionTitle,
                                     CreatorId = d.CreatorId,
                                     CreatorUsername = ctx.Users.Where(y => y.Id == d.CreatorId.ToString()).FirstOrDefault().UserName,

@@ -9,8 +9,7 @@ namespace DiscussionApp.Models
 {
     public class FilmEdit
     {
-        public int FilmId { get; set; } // ???
-        public MediaType MediaType { get; set; }
+        public int FilmId { get; set; }
         public string Title { get; set; }
         public string Director { get; set; }
         public string Writer { get; set; }

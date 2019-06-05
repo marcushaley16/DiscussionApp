@@ -13,13 +13,7 @@ namespace DiscussionApp.Models
         [Display(Name = "ID")]
         public Guid DiscussionId { get; set; }
         public int FilmId { get; set; }
-        public int TelevisionId { get; set; }
-        public int SportId { get; set; }
         public string FilmTitle { get; set; }
-        public string TelevisionTitle { get; set; }
-        public string Matchup { get; set; } 
-        [Display(Name = "Type")]
-        public MediaType MediaType { get; set; }
         [Display(Name = "Title")]
         public string DiscussionTitle { get; set; }
         public Guid CreatorId { get; set; } // hidden

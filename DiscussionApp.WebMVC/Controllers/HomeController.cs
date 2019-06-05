@@ -10,20 +10,10 @@ namespace DiscussionApp.WebMVC.Controllers
 {
     public class HomeController : Controller
     {
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-
         // GET: HomeTrending
         [Route("")]
         public ActionResult Index()
         {
-            //var service = NewDiscussionService();
-            //var model = service.GetTrendingDiscussions();
-
-            //ViewBag.UserId = Guid.Parse(User.Identity.GetUserId());
-
             var service = new HomeService();
             var model = service.GetTrendingDiscussions();
 

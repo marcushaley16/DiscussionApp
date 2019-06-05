@@ -15,9 +15,6 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.DiscussionId)
-        @Html.HiddenFor(model => model.TelevisionId)
-        @Html.HiddenFor(model => model.SportId)
-        @Html.HiddenFor(model => model.MediaType)
 
         <div class="form-group">
             @Html.LabelFor(model => model.FilmId, "Film", htmlAttributes: new { @class = "control-label col-md-2" })

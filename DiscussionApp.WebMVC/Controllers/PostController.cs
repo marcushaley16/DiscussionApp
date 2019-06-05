@@ -146,11 +146,5 @@ namespace DiscussionApp.WebMVC.Controllers
             var service = new DiscussionService(userId);
             return service;
         }
-
-        //private FilmService CreateFilmService()
-        //{
-        //    var service = new FilmService();
-        //    return service;
-        //}
     }
 }

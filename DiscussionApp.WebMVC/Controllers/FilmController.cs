@@ -33,8 +33,6 @@ namespace DiscussionApp.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(FilmCreate model)
         {
-            model.MediaType = MediaType.Film;
-
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -74,7 +72,6 @@ namespace DiscussionApp.WebMVC.Controllers
             var model = new FilmEdit
             {
                 FilmId = detail.FilmId,
-                MediaType = detail.MediaType,
                 Title = detail.Title,
                 Director = detail.Director,
                 Writer = detail.Writer,
